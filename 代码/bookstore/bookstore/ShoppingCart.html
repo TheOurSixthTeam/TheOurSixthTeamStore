@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>Book Store</title>
+<meta name="GENERATOR" content="YesSoftware CodeCharge v.1.1.19 / Templates.ccp build 3/2/2001">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0"> 
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+</head>
+<body style="background-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helveticabackground-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helvetica">
+{Header}
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormMember-->
+   <form method="POST" action="{FileName}" name="Member">
+    <table style="">
+     <tr>
+      <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="2"><font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">会员信息</font></td>
+     </tr>
+     <!--BeginMemberError-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1" colspan="2"><font style="font-size: 10pt; color: #000000">{sMemberErr}<font></td>
+     </tr>
+     <!--EndMemberError-->
+    
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">用户名</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><a href="{member_login_URLLink}?{TransitParams}"><font style="font-size: 10pt; color: #000000">{member_login}</font></a>&nbsp;</td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">姓名</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{name}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">昵称 </font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{last_name}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">地址</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{address}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">Email</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{email}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">电话</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{phone}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td colspan="2" align="right">
+
+      <!-- ***   Buttons   *** -->
+      
+      <input type="hidden" name="FormName" value="Member"/>
+      
+      <input type="hidden" name="PK_member_id" value="{PK_member_id}"/>
+      <input type="hidden" name="member_id" value="{member_id}"/>
+     </td>
+    </tr>
+   </table>
+  </form>
+<!--EndFormMember-->
+   
+   </td>
+  </tr>
+ </table>
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormItems--><table style="">
+     <tr>
+      <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="6"><a name="Items"><font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">订单信息</font></a></td>
+     </tr>
+     <tr>
+      <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">详细</font></td>
+      <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">订单 #</font></td>
+      <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">书名</font></td>
+      <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">价格</font></td>
+      <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">数量</font></td>
+      <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">总价</font></td>
+     </tr>
+     <!--BeginDListItems-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1"><a href="{Field1_URLLink}?order_id={Prm_order_id}&{TransitParams}"><font style="font-size: 10pt; color: #000000">{Field1}</font></a>&nbsp;</td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{order_id}&nbsp;</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{item_id}&nbsp;</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{price}&nbsp;</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{quantity}&nbsp;</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{sub_total}&nbsp;</font></td>
+     </tr>
+     <!--EndDListItems--> 
+     <!--BeginItemsNoRecords-->
+     <tr><td colspan="6" style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">No records</font></td></tr>
+     <!--EndItemsNoRecords--> 
+    </table>
+   <!--EndFormItems-->
+   
+   </td>
+  </tr>
+ </table>
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormTotal--><table style="">
+     <tr>
+      <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">订单总价</font></td>
+     </tr>
+     <!--BeginDListTotal-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{sub_total}&nbsp;</font></td>
+     </tr>
+     <!--EndDListTotal--> 
+     <!--BeginTotalNoRecords-->
+     <tr><td colspan="1" style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">No records</font></td></tr>
+     <!--EndTotalNoRecords--> 
+    </table>
+   <!--EndFormTotal-->
+   
+   </td>
+  </tr>
+ </table>
+
+
+{Footer}
+
+<center><font face="Arial"><small> <a href="http://forway.zj.com">四维科技</a></small></font></center>
+</body>
+</html>

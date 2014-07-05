@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Book Store</title>
+<meta name="GENERATOR" content="YesSoftware CodeCharge v.1.1.19 / Templates.ccp build 3/2/2001">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0"> 
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+</head>
+<body style="background-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helveticabackground-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helvetica">
+{Header}
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormSearch--><form method="GET" action="{ActionPage}" name="Search">
+    <table style="">
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">书名</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><select name="item_id"><!--BeginLBitem_id--><option value="{ID}" {Selected}>{Value}</option><!--EndLBitem_id--></select></td>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">会员</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><select name="member_id"><!--BeginLBmember_id--><option value="{ID}" {Selected}>{Value}</option><!--EndLBmember_id--></select></td>
+      <td><input type="submit" value="Search"></td>
+     </tr>
+    </table>
+    </form><!--EndFormSearch-->
+   
+   </td>
+  </tr>
+ </table>
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormOrders--><table style="">
+     <tr>
+      <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="4"><a name="Orders"><font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">订单信息</font></a></td>
+     </tr>
+     <tr>
+       <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><a ><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">编辑</font></a></td>
+       <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><a href="{FileName}?{FormParams}FormOrders_Sorting=1&FormOrders_Sorted={Form_Sorting}&"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">书名</font></a></td>
+       <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><a href="{FileName}?{FormParams}FormOrders_Sorting=2&FormOrders_Sorted={Form_Sorting}&"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">会员</font></a></td>
+       <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><a href="{FileName}?{FormParams}FormOrders_Sorting=3&FormOrders_Sorted={Form_Sorting}&"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">数量</font></a></td>
+     </tr>
+     <!--BeginDListOrders-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1"><a href="{Field1_URLLink}?order_id={Prm_order_id}&{TransitParams}"><font style="font-size: 10pt; color: #000000">{Field1}</font></a>&nbsp;</td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{item_id}&nbsp;</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{member_id}&nbsp;</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{quantity}&nbsp;</font></td>
+     </tr>
+     <!--EndDListOrders--> 
+     <!--BeginOrdersNoRecords-->
+     <tr><td colspan="4" style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">没有记录 </font></td></tr>
+     <!--EndOrdersNoRecords--> 
+     <tr>
+      <td colspan="4" style="background-color: #FFFFFF; border-style: inset; border-width: 0">
+       <font style="font-size: 10pt; color: #CE7E00; font-weight: bold">
+       
+        <a href="{FormAction}?{FormParams}"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">添加</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <!--BeginOrdersScroller-->
+        <a href{OrdersScrollerPrevSwitch}="{FileName}?{FormParams}{SortParams}FormOrders_Page={PrevPage}#Orders"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">上一页</font></a>
+        [ {OrdersCurrentPage} ]
+        <a href{OrdersScrollerNextSwitch}="{FileName}?{FormParams}{SortParams}FormOrders_Page={NextPage}#Orders"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">下一页</font></a>
+        <!--EndOrdersScroller-->
+       </font>
+      </td>
+     </tr>
+    </table>
+   <!--EndFormOrders-->
+   
+   </td>
+  </tr>
+ </table>
+
+
+{Footer}
+
+<center><font face="Arial"><small> <a href="http://forway.zj.com">四维科技</a></small></font></center>
+</body>
+</html>
