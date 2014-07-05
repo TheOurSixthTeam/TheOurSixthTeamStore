@@ -1,0 +1,187 @@
+<html>
+<head>
+<title>Book Store</title>
+<meta name="GENERATOR" content="YesSoftware CodeCharge v.1.1.19 / Templates.ccp build 3/2/2001">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0"> 
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+</head>
+<body style="background-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helveticabackground-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helvetica">
+{Header}
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormDetail-->
+   <form method="POST" action="{FileName}" name="Detail">
+    <table style="">
+     <tr>
+      <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="2"><font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">图书详细信息</font></td>
+     </tr>
+     <!--BeginDetailError-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1" colspan="2"><font style="font-size: 10pt; color: #000000">{sDetailErr}<font></td>
+     </tr>
+     <!--EndDetailError-->
+    
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">书名</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{name}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">作者</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{author}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">分类</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{category_id}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">价格</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{price}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">图像</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><a href="{image_url_URLLink}"><font style="font-size: 10pt; color: #000000">{image_url}</font></a>&nbsp;</td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">说明</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{notes}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000"></font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><a href="{product_url_URLLink}"><font style="font-size: 10pt; color: #000000">{product_url}</font></a>&nbsp;</td>
+     </tr>
+     
+     <tr>
+      <td colspan="2" align="right">
+
+      <!-- ***   Buttons   *** -->
+      
+      <input type="hidden" name="FormName" value="Detail"/>
+      
+      <input type="hidden" name="Trn_item_id" value="{Trn_item_id}"/>
+      <input type="hidden" name="PK_item_id" value="{PK_item_id}"/>
+      <input type="hidden" name="item_id" value="{item_id}"/>
+     </td>
+    </tr>
+   </table>
+  </form>
+<!--EndFormDetail-->
+   
+   </td>
+  </tr>
+ </table>
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormOrder-->
+   <form method="POST" action="{FileName}" name="Order">
+    <table style="">
+     <!--BeginOrderError-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1" colspan="2"><font style="font-size: 10pt; color: #000000">{sOrderErr}<font></td>
+     </tr>
+     <!--EndOrderError-->
+    
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">数量</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="quantity" maxlength="10" value="{quantity}" size="10"></td>
+     </tr>
+     
+     <tr>
+      <td colspan="2" align="right">
+
+      <!-- ***   Buttons   *** -->
+      
+      <!--BeginOrderInsert-->
+      <input type="hidden" value="insert" name="FormAction">
+      <input type="submit" value="Add to Shopping Cart" onclick="document.Order.FormAction.value = 'insert';">
+      <!--EndOrderInsert-->
+      
+      <input type="hidden" name="FormName" value="Order"/>
+      
+      <input type="hidden" name="PK_order_id" value="{PK_order_id}"/>
+      <input type="hidden" name="order_id" value="{order_id}"/>
+      <input type="hidden" name="item_id" value="{item_id}"/>
+     </td>
+    </tr>
+   </table>
+  </form>
+<!--EndFormOrder-->
+   
+   </td>
+  </tr>
+ </table>
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormRating-->
+   <form method="POST" action="{FileName}" name="Rating">
+    <table style="">
+     <tr>
+      <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="2"><font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">图书评论</font></td>
+     </tr>
+     <!--BeginRatingError-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1" colspan="2"><font style="font-size: 10pt; color: #000000">{sRatingErr}<font></td>
+     </tr>
+     <!--EndRatingError-->
+    
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">当前评价 </font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{rating_view}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">总投票数 </font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{rating_count_view}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">请投票 </font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><select name="rating"><!--BeginLBrating--><option value="{ID}" {Selected}>{Value}</option><!--EndLBrating--></select></td>
+     </tr>
+     
+     <tr>
+      <td colspan="2" align="right">
+
+      <!-- ***   Buttons   *** -->
+      
+      <!--BeginRatingEdit-->
+      <input type="hidden" value="update" name="FormAction"/>
+      
+      <!--BeginRatingUpdate-->
+      <input type="submit" value="Vote" onclick="document.Rating.FormAction.value = 'update';"/>
+      <!--EndRatingUpdate-->
+      
+      <!--EndRatingEdit-->
+      
+      <input type="hidden" name="FormName" value="Rating"/>
+      
+      <input type="hidden" name="Trn_item_id" value="{Trn_item_id}"/>
+      <input type="hidden" name="PK_item_id" value="{PK_item_id}"/>
+      <input type="hidden" name="item_id" value="{item_id}"/>
+      <input type="hidden" name="rating_count" value="{rating_count}"/>
+     </td>
+    </tr>
+   </table>
+  </form>
+<!--EndFormRating-->
+   
+   </td>
+  </tr>
+ </table>
+
+
+{Footer}
+
+<center><font face="Arial"><small> <a href="http://www.codecharge.com">四维科技</a></small></font></center>
+</body>
+</html>

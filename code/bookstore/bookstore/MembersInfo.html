@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>Book Store</title>
+<meta name="GENERATOR" content="YesSoftware CodeCharge v.1.1.19 / Templates.ccp build 3/2/2001">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0"> 
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+</head>
+<body style="background-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helveticabackground-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helvetica">
+{Header}
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormRecord-->
+   <form method="POST" action="{FileName}" name="Record">
+    <table style="">
+     <tr>
+      <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="2"><font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">会员信息</font></td>
+     </tr>
+     <!--BeginRecordError-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1" colspan="2"><font style="font-size: 10pt; color: #000000">{sRecordErr}<font></td>
+     </tr>
+     <!--EndRecordError-->
+    
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">用户名</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><a href="{member_login_URLLink}?member_id={Prm_member_id}&{TransitParams}"><font style="font-size: 10pt; color: #000000">{member_login}</font></a>&nbsp;</td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">权限</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{member_level}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">姓名 </font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{name}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">昵称 </font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{last_name}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">Email</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{email}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">电话</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{phone}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">地址</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{address}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">说明</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{notes}&nbsp;</font></td>
+     </tr>
+     
+     <tr>
+      <td colspan="2" align="right">
+
+      <!-- ***   Buttons   *** -->
+      
+      <input type="hidden" name="FormName" value="Record"/>
+      
+      <input type="hidden" name="PK_member_id" value="{PK_member_id}"/>
+      <input type="hidden" name="member_id" value="{member_id}"/>
+     </td>
+    </tr>
+   </table>
+  </form>
+<!--EndFormRecord-->
+   
+   </td>
+  </tr>
+ </table>
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormOrders--><table style="">
+     <tr>
+      <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="3"><a name="Orders"><font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">购物车</font></a></td>
+     </tr>
+     <tr>
+       <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><a href="{FileName}?{FormParams}FormOrders_Sorting=1&FormOrders_Sorted={Form_Sorting}&"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">订单编号</font></a></td>
+       <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><a href="{FileName}?{FormParams}FormOrders_Sorting=2&FormOrders_Sorted={Form_Sorting}&"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">图书名称</font></a></td>
+       <td style="background-color: #FFFFFF; border-style: inset; border-width: 0"><a href="{FileName}?{FormParams}FormOrders_Sorting=3&FormOrders_Sorted={Form_Sorting}&"><font style="font-size: 10pt; color: #CE7E00; font-weight: bold">数量</font></a></td>
+     </tr>
+     <!--BeginDListOrders-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1"><a href="{order_id_URLLink}?order_id={Prm_order_id}&{TransitParams}"><font style="font-size: 10pt; color: #000000">{order_id}</font></a>&nbsp;</td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{item_id}&nbsp;</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">{quantity}&nbsp;</font></td>
+     </tr>
+     <!--EndDListOrders--> 
+     <!--BeginOrdersNoRecords-->
+     <tr><td colspan="3" style="background-color: #FFFFFF; border-width: 1"><font style="font-size: 10pt; color: #000000">没有记录 </font></td></tr>
+     <!--EndOrdersNoRecords--> 
+    </table>
+   <!--EndFormOrders-->
+   
+   </td>
+  </tr>
+ </table>
+
+
+{Footer}
+
+<center><font face="Arial"><small> <a href="http://forway.zj.com">四维科技</a></small></font></center>
+</body>
+</html>

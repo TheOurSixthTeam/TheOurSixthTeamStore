@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>Book Store</title>
+<meta name="GENERATOR" content="YesSoftware CodeCharge v.1.1.19 / Templates.ccp build 3/2/2001">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0"> 
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+</head>
+<body style="background-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helveticabackground-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helvetica">
+{Header}
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormMembers-->
+   <form method="POST" action="{FileName}" name="Members">
+    <table style="">
+     <tr>
+      <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="2"><font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">添加会员</font></td>
+     </tr>
+     <!--BeginMembersError-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1" colspan="2"><font style="font-size: 10pt; color: #000000">{sMembersErr}<font></td>
+     </tr>
+     <!--EndMembersError-->
+    
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">用户名*</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="member_login" maxlength="20" value="{member_login}" size="20"></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">密码*</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="password" name="member_password" maxlength="20" value="{member_password}" size="20"></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">权限*</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><select name="member_level"><!--BeginLBmember_level--><option value="{ID}" {Selected}>{Value}</option><!--EndLBmember_level--></select></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">姓名 *</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="name" maxlength="50" value="{name}" size="50"></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">昵称 *</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="last_name" maxlength="50" value="{last_name}" size="50"></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">Email*</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="email" maxlength="50" value="{email}" size="50"></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">电话</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="phone" maxlength="50" value="{phone}" size="50"></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">地址</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="address" maxlength="50" value="{address}" size="50"></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">说明</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><textarea name="notes" cols="50" rows="5">{notes}</textarea></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">卡类型</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><select name="card_type_id"><!--BeginLBcard_type_id--><option value="{ID}" {Selected}>{Value}</option><!--EndLBcard_type_id--></select></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">卡号</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="card_number" maxlength="50" value="{card_number}" size="50"></td>
+     </tr>
+     
+     <tr>
+      <td colspan="2" align="right">
+
+      <!-- ***   Buttons   *** -->
+      
+      <!--BeginMembersInsert-->
+      <input type="hidden" value="insert" name="FormAction">
+      <input type="submit" value="Insert" onclick="document.Members.FormAction.value = 'insert';">
+      <!--EndMembersInsert-->
+      
+      <!--BeginMembersEdit-->
+      <input type="hidden" value="update" name="FormAction"/>
+      
+      <!--BeginMembersUpdate-->
+      <input type="submit" value="Update" onclick="document.Members.FormAction.value = 'update';"/>
+      <!--EndMembersUpdate-->
+      
+      <!--EndMembersDelete-->
+      <input type="submit" value="Delete" onclick="document.Members.FormAction.value = 'delete';"/>
+      <!--EndMembersDelete-->
+      
+      <!--EndMembersEdit-->
+      
+      <!--BeginMembersCancel-->
+      <input type="submit" value="Cancel" onclick="document.Members.FormAction.value = 'cancel';"/>
+      <!--EndMembersCancel-->
+      
+      <input type="hidden" name="FormName" value="Members"/>
+      
+      <input type="hidden" name="Trn_member_login" value="{Trn_member_login}"/>
+      <input type="hidden" name="PK_member_id" value="{PK_member_id}"/>
+      <input type="hidden" name="member_id" value="{member_id}"/>
+     </td>
+    </tr>
+   </table>
+  </form>
+<!--EndFormMembers-->
+   <SCRIPT Language="JavaScript">
+if (document.forms["Members"])
+document.Members.onsubmit=delconf;
+function delconf() {
+if (document.Members.FormAction.value == 'delete')
+  return confirm('Delete record?');
+}
+</SCRIPT>
+   </td>
+  </tr>
+ </table>
+
+
+{Footer}
+
+<center><font face="Arial"><small>This dynamic site was generated with <a href="http://www.codecharge.com">CodeCharge</a></small></font></center>
+</body>
+</html>

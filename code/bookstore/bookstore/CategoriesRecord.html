@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Book Store</title>
+<meta name="GENERATOR" content="YesSoftware CodeCharge v.1.1.19 / Templates.ccp build 3/2/2001">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0"> 
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+</head>
+<body style="background-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helveticabackground-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helvetica">
+{Header}
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormCategories-->
+   <form method="POST" action="{FileName}" name="Categories">
+    <table style="">
+     <tr>
+      <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="2"><font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">图书分类</font></td>
+     </tr>
+     <!--BeginCategoriesError-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1" colspan="2"><font style="font-size: 10pt; color: #000000">{sCategoriesErr}<font></td>
+     </tr>
+     <!--EndCategoriesError-->
+    
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">名称</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="name" maxlength="50" value="{name}" size="50"></td>
+     </tr>
+     
+     <tr>
+      <td colspan="2" align="right">
+
+      <!-- ***   Buttons   *** -->
+      
+      <!--BeginCategoriesInsert-->
+      <input type="hidden" value="insert" name="FormAction">
+      <input type="submit" value="Insert" onclick="document.Categories.FormAction.value = 'insert';">
+      <!--EndCategoriesInsert-->
+      
+      <!--BeginCategoriesEdit-->
+      <input type="hidden" value="update" name="FormAction"/>
+      
+      <!--BeginCategoriesUpdate-->
+      <input type="submit" value="Update" onclick="document.Categories.FormAction.value = 'update';"/>
+      <!--EndCategoriesUpdate-->
+      
+      <!--EndCategoriesDelete-->
+      <input type="submit" value="Delete" onclick="document.Categories.FormAction.value = 'delete';"/>
+      <!--EndCategoriesDelete-->
+      
+      <!--EndCategoriesEdit-->
+      
+      <!--BeginCategoriesCancel-->
+      <input type="submit" value="Cancel" onclick="document.Categories.FormAction.value = 'cancel';"/>
+      <!--EndCategoriesCancel-->
+      
+      <input type="hidden" name="FormName" value="Categories"/>
+      
+      <input type="hidden" name="PK_category_id" value="{PK_category_id}"/>
+      <input type="hidden" name="category_id" value="{category_id}"/>
+     </td>
+    </tr>
+   </table>
+  </form>
+<!--EndFormCategories-->
+   
+   </td>
+  </tr>
+ </table>
+
+
+{Footer}
+
+<center><font face="Arial"><small> <a href="http://forway.zj.com">四维科技</a></small></font></center>
+</body>
+</html>

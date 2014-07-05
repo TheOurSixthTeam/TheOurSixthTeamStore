@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Book Store</title>
+<meta name="GENERATOR" content="YesSoftware CodeCharge v.1.1.19 / Templates.ccp build 3/2/2001">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0"> 
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+</head>
+<body style="background-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helveticabackground-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helvetica">
+{Header}
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormeditorials-->
+   <form method="POST" action="{FileName}" name="editorials">
+    <table style="">
+     <tr>
+      <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="2"><font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">其他管理信息</font></td>
+     </tr>
+     <!--BegineditorialsError-->
+     <tr>
+      <td style="background-color: #FFFFFF; border-width: 1" colspan="2"><font style="font-size: 10pt; color: #000000">{seditorialsErr}<font></td>
+     </tr>
+     <!--EndeditorialsError-->
+    
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">信息说明 </font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="article_desc" maxlength="" value="{article_desc}" size=""></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">信息标题 </font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><input type="text" name="article_title" maxlength="200" value="{article_title}" size="50"></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">信息类别 </font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><select name="editorial_cat_id"><!--BeginLBeditorial_cat_id--><option value="{ID}" {Selected}>{Value}</option><!--EndLBeditorial_cat_id--></select></td>
+     </tr>
+     
+     <tr>
+      <td style="background-color: #FFEAC5; border-style: inset; border-width: 0"><font style="font-size: 10pt; color: #000000">信息内容</font></td>
+      <td style="background-color: #FFFFFF; border-width: 1"><select name="item_id"><!--BeginLBitem_id--><option value="{ID}" {Selected}>{Value}</option><!--EndLBitem_id--></select></td>
+     </tr>
+     
+     <tr>
+      <td colspan="2" align="right">
+
+      <!-- ***   Buttons   *** -->
+      
+      <!--BegineditorialsInsert-->
+      <input type="hidden" value="insert" name="FormAction">
+      <input type="submit" value="Insert" onclick="document.editorials.FormAction.value = 'insert';">
+      <!--EndeditorialsInsert-->
+      
+      <!--BegineditorialsEdit-->
+      <input type="hidden" value="update" name="FormAction"/>
+      
+      <!--BegineditorialsUpdate-->
+      <input type="submit" value="Update" onclick="document.editorials.FormAction.value = 'update';"/>
+      <!--EndeditorialsUpdate-->
+      
+      <!--EndeditorialsDelete-->
+      <input type="submit" value="Delete" onclick="document.editorials.FormAction.value = 'delete';"/>
+      <!--EndeditorialsDelete-->
+      
+      <!--EndeditorialsEdit-->
+      
+      <!--BegineditorialsCancel-->
+      <input type="submit" value="Cancel" onclick="document.editorials.FormAction.value = 'cancel';"/>
+      <!--EndeditorialsCancel-->
+      
+      <input type="hidden" name="FormName" value="editorials"/>
+      
+      <input type="hidden" name="PK_article_id" value="{PK_article_id}"/>
+      <input type="hidden" name="article_id" value="{article_id}"/>
+     </td>
+    </tr>
+   </table>
+  </form>
+<!--EndFormeditorials-->
+   
+   </td>
+  </tr>
+ </table>
+
+
+{Footer}
+
+<center><font face="Arial"><small> <a href="http://forway.zj.com">四维科技</a></small></font></center>
+</body>
+</html>

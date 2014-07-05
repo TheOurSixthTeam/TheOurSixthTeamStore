@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Book Store</title>
+<meta name="GENERATOR" content="YesSoftware CodeCharge v.1.1.19 / Templates.ccp build 3/2/2001">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0"> 
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+</head>
+<body style="background-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helveticabackground-color: #FFFFFF; color: #000000; font-family: Arial, Tahoma, Verdana, Helvetica">
+{Header}<center>
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormLogin-->
+    <form action="ShoppingCart.php" method="POST">
+     <table style="">
+      <tr>
+       <td style="background-color: #336699; text-align: Center; border-style: outset; border-width: 1" colspan="2">
+        <font style="font-size: 12pt; color: #FFFFFF; font-weight: bold">输入用户名和密码</font>
+       </td>
+      </tr>
+      <!--BeginLoginError-->
+      <tr>
+       <td colspan="2" style="background-color: #FFFFFF; border-width: 1">
+        <font style="font-size: 10pt; color: #000000">{sLoginErr}</font>
+       </td>
+      </tr>
+      <!--EndLoginError-->
+      <input type="hidden" name="ret_page" value="{ret_page}"><input type="hidden" name="querystring" value="{querystring}">
+      <input type="hidden" name="FormName" value="Login">
+      <!--BeginUserInd-->
+      <tr>
+       <td style="background-color: #FFFFFF; border-width: 1">
+        <font style="font-size: 10pt; color: #000000">{UserID}</font>
+        <input type="hidden" name="FormAction" value="logout">
+        <input type="submit" value="Logout">
+       </td>
+      </tr>
+      <!--EndUserInd-->
+      <!--BeginLoginAct-->
+      <tr>
+       <td style="background-color: #FFEAC5; border-style: inset; border-width: 0">
+        <font style="font-size: 10pt; color: #000000">用户名：</font>
+       </td>
+       <td style="background-color: #FFFFFF; border-width: 1">
+		
+        <input type="text" name="Login" value="{Login}" maxlength="50">
+       </td>
+      </tr>
+      <tr>
+       <td style="background-color: #FFEAC5; border-style: inset; border-width: 0">
+        <font style="font-size: 10pt; color: #000000">密码：</font>
+       </td>
+       <td style="background-color: #FFFFFF; border-width: 1">
+        <input type="password" name="Password" maxlength="50">
+       </td>
+      </tr>
+      <tr>
+       <td colspan="2">
+        <input type="hidden" name="FormAction" value="login">
+        <input type="submit" value="Login"><!--FormAction为测试添加-->
+       </td>
+      </tr>
+      <!--EndLoginAct-->
+     </table>
+    </form>
+<!--EndFormLogin-->
+   guest/guest<br>
+admin/admin
+   </td>
+  </tr>
+ </table>
+
+
+{Footer}
+
+
+</body>
+</html>
